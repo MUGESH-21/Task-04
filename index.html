@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //01)  inserting  Element at specific index
+        let arr =[2,4,6,88,0,5,3]
+        let index=3;
+        let area = 8;
+        arr.splice(3,0,area);
+        console.log(arr)
+
+        //02) array rotation
+        let arr1 =[2,4,6,88,0,5,3]
+        let rotate = 4;
+        while(rotate>0){
+            let temp=arr1[0]
+            for(let i=0;i<arr1.length-1;i++){
+                arr1[i]=arr1[i+1]
+            }
+            arr1[arr1.length-1]=temp
+            rotate--;
+        }
+        console.log(arr1)
+
+        //03)Array of range
+
+        function range(start, end, step =2) {
+        let rangeArray = [];
+        for (let i = start; i <= end; i += step) {
+            rangeArray.push(i);
+        }
+        return rangeArray;
+        }
+        console.log(range(0, 9));
+        console.log(range(5, 15));
+        console.log(range(0, 20, 3));
+
+        //04)array manipulation with slice()
+
+
+        let str = "Hello, world!";
+        let subStr = str.slice(7, 12);
+        console.log(subStr);
+
+        //05)arrray filter
+        let array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+        let evenNumbers = array.filter(function(num) {
+        return num % 2 === 0;
+        });
+        console.log(evenNumbers); 
+
+
+    </script>
+</body>
+</html>
